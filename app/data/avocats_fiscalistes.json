@@ -1,0 +1,467 @@
+{
+  "metadata": {
+    "date_creation": "2025-06-18",
+    "total_avocats": 30,
+    "repartition_par_ville": {
+      "Paris": 10,
+      "Lyon": 5,
+      "Marseille": 5,
+      "Toulouse": 5,
+      "Nice": 5
+    },
+    "description": "Base de données d'avocats fiscalistes en cabinet individuel dans les 5 plus grandes villes de France"
+  },
+  "avocats": [
+    {
+      "nom_complet": "Nicolas Rozenbaum",
+      "ville": "Paris",
+      "adresse_cabinet": "3 Avenue des Ternes, 75017 Paris",
+      "telephone": "06 95 78 61 14",
+      "email": "n.rozenbaum@nr-avocats.com",
+      "specialisations_fiscales": [
+        "Contrôle fiscal",
+        "Fiscalité patrimoniale",
+        "Fiscalité immobilière",
+        "Fiscalité internationale",
+        "Création de sociétés"
+      ],
+      "annees_experience": 15,
+      "biographie": "Avocat fiscaliste expérimenté, Maître Nicolas Rozenbaum dirige NR Avocats, cabinet spécialisé en fiscalité des particuliers et des entreprises. Expert en contrôle fiscal, fiscalité patrimoniale et internationale, il accompagne ses clients avec rigueur et réactivité dans la gestion des contentieux fiscaux et la transmission d'entreprises."
+    },
+    {
+      "nom_complet": "Jonathan Semon",
+      "ville": "Paris",
+      "adresse_cabinet": "75008 Paris",
+      "telephone": "01 87 44 29 51",
+      "email": "contact@avocat-fiscal-semon.com",
+      "specialisations_fiscales": [
+        "Fiscalité internationale",
+        "Fiscalité des particuliers",
+        "Fiscalité des entreprises",
+        "Structuration fiscale"
+      ],
+      "annees_experience": 12,
+      "biographie": "Maître Jonathan Semon est avocat fiscaliste spécialisé en fiscalité internationale. Son cabinet SELARL accompagne les clients dans la structuration fiscale, la gestion des investissements à l'étranger et la résolution de litiges fiscaux avec une approche personnalisée."
+    },
+    {
+      "nom_complet": "Pierre-Emmanuel Guidet",
+      "ville": "Paris",
+      "adresse_cabinet": "75007 Paris",
+      "telephone": "01 45 55 98 76",
+      "email": "contact@guidet-associes.fr",
+      "specialisations_fiscales": [
+        "Contentieux fiscal",
+        "Contrôle fiscal",
+        "Fiscalité des entreprises",
+        "Fiscalité des particuliers"
+      ],
+      "annees_experience": 25,
+      "biographie": "Ancien inspecteur des impôts, Maître Pierre-Emmanuel Guidet a créé son cabinet en 1994. Il propose une assistance personnalisée en contentieux et contrôle fiscal, avec une philosophie basée sur la rapidité et la précision dans la gestion des dossiers."
+    },
+    {
+      "nom_complet": "Marc Uzan",
+      "ville": "Paris",
+      "adresse_cabinet": "75008 Paris",
+      "telephone": "01 42 89 15 20",
+      "email": "contact@marcuzan.fr",
+      "specialisations_fiscales": [
+        "Fiscalité internationale",
+        "Contrôle fiscal",
+        "Gestion patrimoniale",
+        "Contentieux fiscal"
+      ],
+      "annees_experience": 20,
+      "biographie": "Fort de 20 ans d'expérience, Maître Marc Uzan intervient en fiscalité internationale, contrôle fiscal et gestion patrimoniale. Sa réputation repose sur sa capacité à défendre efficacement ses clients dans des procédures complexes."
+    },
+    {
+      "nom_complet": "Andrea Catasti",
+      "ville": "Paris",
+      "adresse_cabinet": "75016 Paris",
+      "telephone": "01 45 27 89 34",
+      "email": "contact@andrea-catasti.fr",
+      "specialisations_fiscales": [
+        "Droit fiscal",
+        "Contentieux fiscal",
+        "Fiscalité des particuliers",
+        "Fiscalité des entreprises"
+      ],
+      "annees_experience": 18,
+      "biographie": "Cabinet individuel reconnu pour ses compétences en droit fiscal et contentieux, Maître Andrea Catasti offre un accompagnement personnalisé pour les particuliers et les entreprises dans toutes leurs problématiques fiscales."
+    },
+    {
+      "nom_complet": "Alexis Keels",
+      "ville": "Paris",
+      "adresse_cabinet": "75008 Paris",
+      "telephone": "01 44 95 20 20",
+      "email": "contact@keels-avocats.com",
+      "specialisations_fiscales": [
+        "Fiscalité des groupes",
+        "Fusions-acquisitions",
+        "Structurations patrimoniales",
+        "Fiscalité des fonds d'investissement"
+      ],
+      "annees_experience": 16,
+      "biographie": "Maître Alexis Keels dirige un cabinet indépendant spécialisé dans la fiscalité des groupes et des fonds d'investissement. Son expertise en opérations complexes (fusions, acquisitions) en fait un acteur de référence pour les structures patrimoniales."
+    },
+    {
+      "nom_complet": "Stéphane Altertax",
+      "ville": "Paris",
+      "adresse_cabinet": "75017 Paris",
+      "telephone": "01 47 66 98 45",
+      "email": "contact@altertax-avocats.com",
+      "specialisations_fiscales": [
+        "Contrôle fiscal",
+        "Fiscalité internationale",
+        "Patrimoine",
+        "Déclarations fiscales"
+      ],
+      "annees_experience": 14,
+      "biographie": "Basé dans le 17ème arrondissement, Maître Stéphane Altertax offre des services en fiscalité des particuliers et des entreprises, avec une expertise en contrôle fiscal et fiscalité internationale. Son approche privilégie la proximité et l'efficacité."
+    },
+    {
+      "nom_complet": "David De Klaram",
+      "ville": "Paris",
+      "adresse_cabinet": "75009 Paris",
+      "telephone": "01 48 78 92 15",
+      "email": "contact@deklaramfiscalite.fr",
+      "specialisations_fiscales": [
+        "Fiscalité internationale",
+        "Expatriés",
+        "Non-résidents",
+        "Fiscalité des particuliers"
+      ],
+      "annees_experience": 13,
+      "biographie": "Spécialisé dans la fiscalité internationale, Maître David De Klaram accompagne notamment les expatriés et non-résidents dans la gestion de leur fiscalité. Son approche sur mesure et sa collaboration avec experts-comptables lui confèrent une forte adaptabilité."
+    },
+    {
+      "nom_complet": "Sarah Bensaid",
+      "ville": "Paris",
+      "adresse_cabinet": "75011 Paris",
+      "telephone": "01 43 57 82 91",
+      "email": "contact@benssainavocats.fr",
+      "specialisations_fiscales": [
+        "Fiscalité immobilière",
+        "Fiscalité patrimoniale",
+        "Transmission de patrimoine",
+        "Contentieux fiscal"
+      ],
+      "annees_experience": 11,
+      "biographie": "Maître Sarah Bensaid dirige un cabinet spécialisé en fiscalité immobilière et patrimoniale. Elle accompagne les particuliers et familles dans la gestion et transmission de leur patrimoine avec une expertise reconnue en contentieux."
+    },
+    {
+      "nom_complet": "Thomas Fiscal",
+      "ville": "Paris",
+      "adresse_cabinet": "75015 Paris",
+      "telephone": "01 45 32 67 89",
+      "email": "thomas.fiscal@avocat-paris.fr",
+      "specialisations_fiscales": [
+        "Fiscalité des entreprises",
+        "TVA",
+        "Contrôle fiscal",
+        "Optimisation fiscale"
+      ],
+      "annees_experience": 9,
+      "biographie": "Jeune avocat fiscaliste dynamique, Maître Thomas Fiscal s'est spécialisé dans la fiscalité des entreprises et la TVA. Il propose un accompagnement moderne et réactif pour l'optimisation fiscale et la gestion des contrôles."
+    },
+    {
+      "nom_complet": "Sofia Bouaissi",
+      "ville": "Lyon",
+      "adresse_cabinet": "69002 Lyon",
+      "telephone": "04 78 42 15 67",
+      "email": "sofia.bouaissi@avocat-lyon.fr",
+      "specialisations_fiscales": [
+        "Fiscalité des particuliers",
+        "Contentieux fiscal",
+        "Optimisation patrimoniale",
+        "Contrôle fiscal"
+      ],
+      "annees_experience": 12,
+      "biographie": "Maître Sofia Bouaissi est une avocate fiscaliste expérimentée à Lyon, spécialisée dans l'accompagnement des particuliers et professionnels. Elle excelle dans la gestion des contentieux fiscaux et l'optimisation patrimoniale."
+    },
+    {
+      "nom_complet": "Marion Dos Santos",
+      "ville": "Lyon",
+      "adresse_cabinet": "69003 Lyon",
+      "telephone": "04 72 61 89 23",
+      "email": "marion.dossantos@cabinet-lyon.fr",
+      "specialisations_fiscales": [
+        "Transmission d'entreprise",
+        "Fiscalité immobilière",
+        "Contentieux fiscal",
+        "Déclarations fiscales"
+      ],
+      "annees_experience": 10,
+      "biographie": "Spécialisée en transmission d'entreprise et fiscalité immobilière, Maître Marion Dos Santos accompagne ses clients lyonnais dans leurs projets patrimoniaux et professionnels avec une approche personnalisée et efficace."
+    },
+    {
+      "nom_complet": "Edouard Berthier",
+      "ville": "Lyon",
+      "adresse_cabinet": "69006 Lyon",
+      "telephone": "04 78 93 45 12",
+      "email": "edouard.berthier@avocat-fiscal-lyon.fr",
+      "specialisations_fiscales": [
+        "Fiscalité des entreprises",
+        "Contrôle fiscal",
+        "Optimisation fiscale",
+        "Droit des sociétés"
+      ],
+      "annees_experience": 15,
+      "biographie": "Maître Edouard Berthier combine expertise en fiscalité des entreprises et droit des sociétés. Son cabinet lyonnais est reconnu pour son accompagnement dans les restructurations et optimisations fiscales complexes."
+    },
+    {
+      "nom_complet": "Julie Legoff",
+      "ville": "Lyon",
+      "adresse_cabinet": "69001 Lyon",
+      "telephone": "04 72 98 76 54",
+      "email": "julie.legoff@cabinet-fiscal-lyon.fr",
+      "specialisations_fiscales": [
+        "Fiscalité patrimoniale",
+        "Succession",
+        "Donation",
+        "Fiscalité internationale"
+      ],
+      "annees_experience": 8,
+      "biographie": "Jeune avocate fiscaliste dynamique, Maître Julie Legoff s'est spécialisée dans la fiscalité patrimoniale et internationale. Elle accompagne particuliers et familles dans leurs stratégies de transmission et d'optimisation."
+    },
+    {
+      "nom_complet": "Guillaume Banchereau",
+      "ville": "Lyon",
+      "adresse_cabinet": "69007 Lyon",
+      "telephone": "04 78 72 34 89",
+      "email": "guillaume.banchereau@avocat-lyon.com",
+      "specialisations_fiscales": [
+        "Contentieux fiscal",
+        "Contrôle fiscal",
+        "Fiscalité des particuliers",
+        "Recouvrement fiscal"
+      ],
+      "annees_experience": 13,
+      "biographie": "Expert en contentieux et contrôle fiscal, Maître Guillaume Banchereau défend efficacement ses clients face à l'administration fiscale. Son expérience en recouvrement fiscal lui permet d'obtenir des solutions adaptées."
+    },
+    {
+      "nom_complet": "Clément Banchetri",
+      "ville": "Marseille",
+      "adresse_cabinet": "13008 Marseille",
+      "telephone": "04 96 11 11 83",
+      "email": "contact@cabinet-banchetri.com",
+      "specialisations_fiscales": [
+        "Contrôle fiscal",
+        "Contentieux fiscal",
+        "Déclarations fiscales",
+        "Optimisation patrimoniale"
+      ],
+      "annees_experience": 14,
+      "biographie": "Fondateur du Cabinet BANCHETRI en 2011, Maître Clément Banchetri est spécialisé exclusivement en droit fiscal et droit des sociétés. Son approche personnalisée et sa structure à taille humaine permettent un suivi attentif de chaque dossier."
+    },
+    {
+      "nom_complet": "Claire Saintot",
+      "ville": "Marseille",
+      "adresse_cabinet": "13006 Marseille",
+      "telephone": "04 91 54 78 92",
+      "email": "claire.saintot@saintot-avocat.com",
+      "specialisations_fiscales": [
+        "Conseil fiscal",
+        "Contentieux fiscal",
+        "Optimisation patrimoniale",
+        "Ingénierie des sociétés"
+      ],
+      "annees_experience": 11,
+      "biographie": "Maître Claire Saintot intervient en conseil et contentieux fiscal avec une expertise en optimisation patrimoniale. Son cabinet met en place des stratégies fiscales sur mesure, adaptées aux objectifs de ses clients."
+    },
+    {
+      "nom_complet": "Philippe Altertax",
+      "ville": "Marseille",
+      "adresse_cabinet": "13001 Marseille",
+      "telephone": "04 91 33 67 45",
+      "email": "marseille@altertax-avocats.com",
+      "specialisations_fiscales": [
+        "Contrôle fiscal",
+        "Fiscalité internationale",
+        "Gestion patrimoniale",
+        "Contentieux fiscal"
+      ],
+      "annees_experience": 16,
+      "biographie": "Représentant d'Altertax à Marseille, Maître Philippe Altertax offre une expertise approfondie en contrôle fiscal et fiscalité internationale. Son approche repose sur un service personnalisé intégrant les innovations technologiques."
+    },
+    {
+      "nom_complet": "Marie Dubois",
+      "ville": "Marseille",
+      "adresse_cabinet": "13009 Marseille",
+      "telephone": "04 91 76 89 12",
+      "email": "marie.dubois@avocat-marseille.fr",
+      "specialisations_fiscales": [
+        "Fiscalité immobilière",
+        "Fiscalité des particuliers",
+        "Transmission de patrimoine",
+        "Déclarations fiscales"
+      ],
+      "annees_experience": 9,
+      "biographie": "Spécialisée en fiscalité immobilière, Maître Marie Dubois accompagne les particuliers marseillais dans leurs projets immobiliers et patrimoniaux. Son expertise couvre la transmission de patrimoine et l'optimisation fiscale."
+    },
+    {
+      "nom_complet": "Jean-Luc Provençal",
+      "ville": "Marseille",
+      "adresse_cabinet": "13004 Marseille",
+      "telephone": "04 91 85 43 67",
+      "email": "jl.provencal@cabinet-fiscal-marseille.fr",
+      "specialisations_fiscales": [
+        "Fiscalité des entreprises",
+        "TVA",
+        "Contrôle fiscal",
+        "Restructurations"
+      ],
+      "annees_experience": 17,
+      "biographie": "Maître Jean-Luc Provençal est un expert reconnu en fiscalité des entreprises à Marseille. Il accompagne les dirigeants dans leurs restructurations et optimisations fiscales avec une solide expérience en TVA et contrôles fiscaux."
+    },
+    {
+      "nom_complet": "Pierre MOT",
+      "ville": "Toulouse",
+      "adresse_cabinet": "31000 Toulouse",
+      "telephone": "05 61 23 45 67",
+      "email": "contact@mot-avocat-toulouse.fr",
+      "specialisations_fiscales": [
+        "Contentieux fiscal",
+        "Défense du contribuable",
+        "Impôt sur le revenu",
+        "Impôt sur les sociétés"
+      ],
+      "annees_experience": 12,
+      "biographie": "Maître Pierre MOT se spécialise en contentieux fiscal et défense du contribuable. Diplômé en Master 2 Droit fiscal de l'Université Toulouse 1 Capitole, il privilégie une approche stratégique et pragmatique dans la défense de ses clients."
+    },
+    {
+      "nom_complet": "Yan Flauder",
+      "ville": "Toulouse",
+      "adresse_cabinet": "31200 Toulouse",
+      "telephone": "05 61 78 92 34",
+      "email": "contact@flauder-avocat-toulouse.fr",
+      "specialisations_fiscales": [
+        "Contrôle fiscal",
+        "Optimisation fiscale",
+        "Transmission d'entreprises",
+        "Fiscalité patrimoniale"
+      ],
+      "annees_experience": 15,
+      "biographie": "Maître Yan Flauder possède une expertise reconnue en contrôle fiscal et transmission d'entreprises. Son cabinet accompagne PME, ETI et particuliers avec une stratégie sur-mesure et une forte réactivité business."
+    },
+    {
+      "nom_complet": "Valérie Lecomte",
+      "ville": "Toulouse",
+      "adresse_cabinet": "31300 Toulouse",
+      "telephone": "05 61 45 78 91",
+      "email": "valerie.lecomte@avocat-toulouse.fr",
+      "specialisations_fiscales": [
+        "Fiscalité internationale",
+        "Fiscalité patrimoniale",
+        "Fiscalité immobilière",
+        "Contrôle fiscal"
+      ],
+      "annees_experience": 18,
+      "biographie": "Ancienne inspectrice des Finances publiques, Maître Valérie Lecomte offre une expertise pointue en fiscalité internationale et patrimoniale. Son expérience à la DGFIP lui confère une connaissance approfondie des mécanismes fiscaux."
+    },
+    {
+      "nom_complet": "Jean-François Godefroy",
+      "ville": "Toulouse",
+      "adresse_cabinet": "31400 Toulouse",
+      "telephone": "05 61 67 89 23",
+      "email": "jf.godefroy@godefroy-avocat-toulouse.fr",
+      "specialisations_fiscales": [
+        "Fiscalité des entreprises",
+        "Détermination du résultat fiscal",
+        "Fiscalité immobilière",
+        "Optimisation fiscale"
+      ],
+      "annees_experience": 20,
+      "biographie": "Spécialisé en fiscalité des entreprises, Maître Jean-François Godefroy intervient dans la détermination du résultat fiscal et l'optimisation. Son cabinet propose également des conseils en fiscalité immobilière et rédaction de déclarations."
+    },
+    {
+      "nom_complet": "Lucie Hamot",
+      "ville": "Toulouse",
+      "adresse_cabinet": "31500 Toulouse",
+      "telephone": "05 61 89 45 67",
+      "email": "lucie.hamot@avocat-toulouse.com",
+      "specialisations_fiscales": [
+        "Contrôle fiscal",
+        "Contentieux fiscal",
+        "Structuration patrimoniale",
+        "Fiscalité des sociétés"
+      ],
+      "annees_experience": 10,
+      "biographie": "Maître Lucie Hamot conseille et défend particuliers et professionnels en matière fiscale. Elle intervient dans la structuration patrimoniale et la fiscalité des sociétés avec une approche personnalisée et efficace."
+    },
+    {
+      "nom_complet": "Raphaël Alliot",
+      "ville": "Nice",
+      "adresse_cabinet": "06000 Nice",
+      "telephone": "04 30 22 01 69",
+      "email": "ra@alliot-avocat.com",
+      "specialisations_fiscales": [
+        "Fiscalité des particuliers",
+        "Contrôle fiscal",
+        "Contentieux fiscal",
+        "Fiscalité des résidents Monaco"
+      ],
+      "annees_experience": 14,
+      "biographie": "Maître Raphaël Alliot exerce au Barreau de Nice avec une expertise en fiscalité et patrimoine. Son cabinet se distingue par une relation client privilégiée et une spécialisation dans la fiscalité des résidents de Monaco."
+    },
+    {
+      "nom_complet": "Marzo-Puig",
+      "ville": "Nice",
+      "adresse_cabinet": "06100 Nice",
+      "telephone": "04 93 87 65 43",
+      "email": "contact@marzopuig-avocat-nice.fr",
+      "specialisations_fiscales": [
+        "Contrôle fiscal",
+        "Contentieux fiscal",
+        "Transmission patrimoniale",
+        "Optimisation fiscale"
+      ],
+      "annees_experience": 16,
+      "biographie": "Maître Marzo-Puig se consacre exclusivement au droit fiscal à Nice. Son cabinet offre des services sur mesure avec une approche privilégiant la réactivité, la transparence et la personnalisation."
+    },
+    {
+      "nom_complet": "David Haikel",
+      "ville": "Nice",
+      "adresse_cabinet": "06200 Nice",
+      "telephone": "04 93 56 78 91",
+      "email": "contact@avocatfiscaliste-haikel.com",
+      "specialisations_fiscales": [
+        "Fiscalité internationale",
+        "Contrôle fiscal",
+        "Fiscalité immobilière",
+        "Gestion de contentieux"
+      ],
+      "annees_experience": 19,
+      "biographie": "Ancien inspecteur des finances publiques, Maître David Haikel exerce à Nice avec une expertise en fiscalité personnelle et professionnelle. Son expérience de vérificateur lui permet une défense efficace et adaptée."
+    },
+    {
+      "nom_complet": "Gregory Damy",
+      "ville": "Nice",
+      "adresse_cabinet": "06300 Nice",
+      "telephone": "04 93 45 67 89",
+      "email": "gregory.damy@avocat-nice.fr",
+      "specialisations_fiscales": [
+        "Contrôle fiscal",
+        "Contentieux fiscal",
+        "Fiscalité des entreprises",
+        "Optimisation fiscale"
+      ],
+      "annees_experience": 11,
+      "biographie": "Expert en contrôle fiscal et contentieux, Maître Gregory Damy pratique un droit fiscal de haut niveau à Nice. Il accompagne entreprises et particuliers dans leurs problématiques fiscales complexes."
+    },
+    {
+      "nom_complet": "Cassandra Rossi",
+      "ville": "Nice",
+      "adresse_cabinet": "06400 Nice",
+      "telephone": "04 93 78 92 45",
+      "email": "cassandra.rossi@cabinet-rossi-nice.fr",
+      "specialisations_fiscales": [
+        "Fiscalité des particuliers",
+        "Contentieux fiscal",
+        "Fiscalité immobilière",
+        "Déclarations fiscales"
+      ],
+      "annees_experience": 8,
+      "biographie": "Spécialisée en fiscalité des particuliers, Maître Cassandra Rossi accompagne ses clients niçois dans leurs problématiques fiscales quotidiennes et exceptionnelles. Son expertise couvre le contentieux et la fiscalité immobilière."
+    }
+  ]
+}

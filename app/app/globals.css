@@ -1,0 +1,130 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 100% 13%;
+    
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 16% 47%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 100% 13%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 215 100% 13%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    
+    --primary: 215 100% 13%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 262 100% 13%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 210 40% 96%;
+    --accent-foreground: 215 100% 13%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --ring: 215 100% 13%;
+    
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 215 100% 13%;
+    --foreground: 0 0% 100%;
+    
+    --muted: 215 32% 19%;
+    --muted-foreground: 215 16% 65%;
+    
+    --popover: 215 100% 13%;
+    --popover-foreground: 0 0% 100%;
+    
+    --card: 215 100% 13%;
+    --card-foreground: 0 0% 100%;
+    
+    --border: 215 32% 19%;
+    --input: 215 32% 19%;
+    
+    --primary: 0 0% 100%;
+    --primary-foreground: 215 100% 13%;
+    
+    --secondary: 262 100% 13%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 215 32% 19%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Lexanova Custom Colors */
+:root {
+  --lexanova-blue: rgb(10, 26, 56);
+  --lexanova-violet: rgb(26, 10, 56);
+  --lexanova-blue-light: rgb(30, 58, 138);
+  --lexanova-violet-light: rgb(67, 56, 202);
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: countUp 2s ease-out forwards;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom gradient backgrounds */
+.gradient-bg-blue {
+  background: linear-gradient(135deg, rgb(10, 26, 56) 0%, rgb(30, 58, 138) 100%);
+}
+
+.gradient-bg-violet {
+  background: linear-gradient(135deg, rgb(26, 10, 56) 0%, rgb(67, 56, 202) 100%);
+}

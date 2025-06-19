@@ -1,0 +1,171 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1868ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.5s (1266 modules)
+ ✓ Compiled in 588ms (633 modules)
+ GET / 200 in 4089ms
+ ○ Compiling /api/articles ...
+ ✓ Compiled /api/articles in 1549ms (664 modules)
+ ✓ Compiled (666 modules)
+ GET /api/articles?limit=6 200 in 1946ms
+ GET /api/lawyers?limit=6&premium=true 200 in 1948ms
+ GET /api/lawyers?limit=6&premium=true 200 in 133ms
+ GET /api/articles?limit=6 200 in 143ms
+ GET / 200 in 281ms
+ ○ Compiling /cvu-avocats ...
+ ✓ Compiled /cvu-avocats in 6s (3105 modules)
+ GET /api/articles?limit=6 200 in 6261ms
+ GET /api/lawyers?limit=6&premium=true 200 in 6311ms
+ GET /ressources-utiles/modeles 404 in 7056ms
+ GET /ressources-utiles/documents 404 in 7050ms
+ GET /ressources-utiles/guides 404 in 7057ms
+ GET /espace-avocat/rendez-vous 404 in 7044ms
+ GET /espace-avocat/profil 404 in 7046ms
+ GET /trouver-un-avocat-fiscaliste 200 in 7366ms
+ GET /contact 200 in 7188ms
+ GET /simulateurs 200 in 7237ms
+ GET /prise-rendez-vous 200 in 7189ms
+ GET /a-propos 200 in 7196ms
+ GET /mentions-legales 200 in 7144ms
+ GET /cgu 200 in 7138ms
+ GET /politique-confidentialite 200 in 7150ms
+ GET /espace-avocat/connexion 200 in 7232ms
+ GET /api/articles?limit=6 200 in 456ms
+ GET /espace-avocat 200 in 7569ms
+ GET /api/lawyers?limit=6&premium=true 200 in 725ms
+ GET /cvu-avocats 200 in 7690ms
+ ○ Compiling /api/resources ...
+ GET /guides-fiscaux/is-et-plus-values-optimisation-fiscale-pour-les-entreprises 200 in 7753ms
+ GET /guides-fiscaux/ifi-2025-nouveautes-et-strategies-doptimisation 200 in 7740ms
+ GET /guides-fiscaux/calcul-des-revenus-fonciers-methodes-et-deductions 200 in 7756ms
+ GET /guides-fiscaux/pacte-dutreil-optimiser-la-transmission-dentreprise 200 in 7754ms
+ GET /guides-fiscaux/residence-fiscale-et-location-meublee-guide-pratique-2025 200 in 7747ms
+ GET /guides-fiscaux/dividendes-de-source-etrangere-tout-savoir-sur-limposition-en-france 200 in 7750ms
+ GET /espace-avocat/devenir-partenaire 200 in 7849ms
+ ✓ Compiled /api/resources in 2.4s (2377 modules)
+ ✓ Compiled /api/cities in 0ms (2385 modules)
+ GET /api/articles?limit=6 200 in 3350ms
+ ✓ Compiled in 1ms (2389 modules)
+ ✓ Compiled in 1ms (2389 modules)
+ GET /api/fiscal-domains 200 in 4309ms
+ GET /api/fiscal-domains 200 in 4356ms
+ GET /api/fiscal-domains 200 in 4316ms
+ GET /guides-fiscaux 200 in 12073ms
+ ✓ Compiled in 1ms (2389 modules)
+ GET /api/blog-posts?limit=12 200 in 4927ms
+ GET /api/blog-tags 200 in 4921ms
+ GET /api/case-studies?limit=12 200 in 4918ms
+ GET /api/case-studies?featured=true&limit=3 200 in 4908ms
+ GET /api/resources?limit=20 200 in 4902ms
+ GET /api/blog-posts?featured=true&limit=3 200 in 4927ms
+ GET /cas-pratiques 200 in 12260ms
+ GET /ressources-utiles 200 in 12193ms
+ GET /blog 200 in 12312ms
+ GET /blog/optimisation-fiscale-vs-evasion-fiscale-comprendre-la-difference 404 in 329ms
+ GET /blog/loi-de-finances-2025-ce-qui-change-pour-les-entreprises 404 in 329ms
+ GET /blog/jurisprudence-recente-impact-sur-la-fiscalite-des-holdings 404 in 325ms
+ GET /blog/investissement-locatif-2025-nouvelles-niches-fiscales 404 in 322ms
+ ○ Compiling /api/resources/[slug]/download ...
+ ✓ Compiled /api/resources/[slug]/download in 3.5s (3125 modules)
+ GET /cas-pratiques/la-famille-investisseur-et-loptimisation-patrimoniale 404 in 3832ms
+ GET /cas-pratiques/lentrepreneur-et-la-restructuration-fiscale-un-pari-gagnant 404 in 3774ms
+ GET /cas-pratiques/le-defi-de-lexpatrie-residence-fiscale-et-double-imposition 404 in 3761ms
+ GET /espace-avocat/messagerie 404 in 3741ms
+ GET /espace-avocat/abonnement 404 in 3729ms
+ GET /api/resources/checklist-residence-fiscale/download 200 in 4080ms
+ GET /api/resources/modele-de-pacte-dutreil/download 200 in 4082ms
+ GET /api/resources/guide-de-calcul-ifi-2025/download 200 in 4068ms
+ GET /api/resources/formulaire-de-declaration-lmnp/download 200 in 4056ms
+ ○ Compiling /api/fiscal-domains/[slug] ...
+ ✓ Compiled /api/fiscal-domains/[slug] in 908ms (2396 modules)
+ GET /api/fiscal-domains/fiscalite-internationale 200 in 1382ms
+ GET /api/fiscal-domains/fiscalite-immobiliere 200 in 1381ms
+ GET /api/fiscal-domains/fiscalite-immobiliere 200 in 1377ms
+ GET /api/fiscal-domains/fiscalite-patrimoniale 200 in 1375ms
+ GET /api/fiscal-domains/fiscalite-patrimoniale 200 in 1371ms
+ GET /api/fiscal-domains/fiscalite-des-dirigeants 200 in 1366ms
+ GET /api/fiscal-domains/fiscalite-des-dirigeants 200 in 1366ms
+ GET /api/fiscal-domains/fiscalite-des-particuliers 200 in 1365ms
+ GET /api/fiscal-domains/fiscalite-des-particuliers 200 in 1363ms
+ GET /api/fiscal-domains/fiscalite-des-entreprises 200 in 1363ms
+ GET /api/fiscal-domains/fiscalite-des-entreprises 200 in 1363ms
+ GET /api/fiscal-domains/fiscalite-internationale 200 in 1383ms
+ GET /guides-fiscaux/domaines/fiscalite-des-particuliers 200 in 6121ms
+ GET /guides-fiscaux/domaines/fiscalite-des-entreprises 200 in 6172ms
+ GET /guides-fiscaux/domaines/fiscalite-immobiliere 200 in 6171ms
+ GET /guides-fiscaux/domaines/fiscalite-patrimoniale 200 in 6174ms
+ GET /guides-fiscaux/domaines/fiscalite-des-dirigeants 200 in 6174ms
+ GET /guides-fiscaux/domaines/fiscalite-internationale 200 in 6199ms
+ GET /espace-avocat/abonnement 404 in 223ms
+ GET /espace-avocat/messagerie 404 in 222ms
+ GET /cas-pratiques/lentrepreneur-et-la-restructuration-fiscale-un-pari-gagnant 404 in 222ms
+ GET /blog/optimisation-fiscale-vs-evasion-fiscale-comprendre-la-difference 404 in 262ms
+ GET /simulateurs 200 in 336ms
+ GET /politique-confidentialite 200 in 349ms
+ GET /prise-rendez-vous 200 in 349ms
+ GET /cgu 200 in 350ms
+ GET /cvu-avocats 200 in 351ms
+ GET /trouver-un-avocat-fiscaliste 200 in 205ms
+ GET /api/fiscal-domains 200 in 214ms
+ GET /blog/jurisprudence-recente-impact-sur-la-fiscalite-des-holdings 404 in 226ms
+ GET /api/articles?limit=6 200 in 287ms
+ GET /api/resources/formulaire-de-declaration-lmnp/download 200 in 271ms
+ GET / 200 in 327ms
+ GET /guides-fiscaux 200 in 686ms
+ GET /espace-avocat/profil 404 in 333ms
+ GET /espace-avocat/rendez-vous 404 in 340ms
+ GET /guides-fiscaux/ifi-2025-nouveautes-et-strategies-doptimisation 200 in 346ms
+ GET /guides-fiscaux/is-et-plus-values-optimisation-fiscale-pour-les-entreprises 200 in 347ms
+ GET /api/resources?limit=20 200 in 187ms
+ GET /api/fiscal-domains 200 in 219ms
+ GET /ressources-utiles 200 in 471ms
+ GET /api/resources/modele-de-pacte-dutreil/download 200 in 161ms
+ GET /api/resources/guide-de-calcul-ifi-2025/download 200 in 132ms
+ GET /a-propos 200 in 216ms
+ GET /api/resources/checklist-residence-fiscale/download 200 in 245ms
+ GET /api/fiscal-domains/fiscalite-des-particuliers 200 in 221ms
+ GET /guides-fiscaux/domaines/fiscalite-des-particuliers 200 in 503ms
+ GET /blog/investissement-locatif-2025-nouvelles-niches-fiscales 404 in 237ms
+ GET /guides-fiscaux/residence-fiscale-et-location-meublee-guide-pratique-2025 200 in 397ms
+ GET /api/blog-posts?limit=12 200 in 248ms
+ GET /api/blog-posts?featured=true&limit=3 200 in 249ms
+ GET /api/blog-tags 200 in 260ms
+ GET /api/fiscal-domains/fiscalite-patrimoniale 200 in 218ms
+ GET /api/fiscal-domains/fiscalite-des-entreprises 200 in 218ms
+ GET /guides-fiscaux/domaines/fiscalite-patrimoniale 200 in 527ms
+ GET /blog 200 in 531ms
+ GET /guides-fiscaux/domaines/fiscalite-des-entreprises 200 in 535ms
+ GET /guides-fiscaux/pacte-dutreil-optimiser-la-transmission-dentreprise 200 in 377ms
+ GET /guides-fiscaux/calcul-des-revenus-fonciers-methodes-et-deductions 200 in 390ms
+ GET /cas-pratiques/la-famille-investisseur-et-loptimisation-patrimoniale 404 in 300ms
+ GET /ressources-utiles/modeles 404 in 292ms
+ GET /contact 200 in 303ms
+ GET /espace-avocat 200 in 299ms
+ GET /espace-avocat/connexion 200 in 285ms
+ GET /cas-pratiques/le-defi-de-lexpatrie-residence-fiscale-et-double-imposition 404 in 288ms
+ GET /ressources-utiles/guides 404 in 286ms
+ GET /mentions-legales 200 in 288ms
+ GET /api/fiscal-domains/fiscalite-internationale 200 in 195ms
+ GET /espace-avocat/devenir-partenaire 200 in 226ms
+ GET /blog/loi-de-finances-2025-ce-qui-change-pour-les-entreprises 404 in 230ms
+ GET /guides-fiscaux/domaines/fiscalite-internationale 200 in 484ms
+ GET /api/fiscal-domains 200 in 200ms
+ GET /api/case-studies?limit=12 200 in 202ms
+ GET /api/case-studies?featured=true&limit=3 200 in 203ms
+ GET /cas-pratiques 200 in 459ms
+ GET /ressources-utiles/documents 404 in 146ms
+ GET /api/fiscal-domains/fiscalite-des-dirigeants 200 in 234ms
+ GET /api/fiscal-domains/fiscalite-immobiliere 200 in 221ms
+ GET /guides-fiscaux/domaines/fiscalite-des-dirigeants 200 in 511ms
+ GET /guides-fiscaux/domaines/fiscalite-immobiliere 200 in 511ms
+ GET /guides-fiscaux/dividendes-de-source-etrangere-tout-savoir-sur-limposition-en-france 200 in 258ms
+ ✓ Compiled in 1301ms (1374 modules)
+ ✓ Compiled in 1163ms (1374 modules)
+ ✓ Compiled in 1051ms (1374 modules)
+[?25h

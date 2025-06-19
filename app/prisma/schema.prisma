@@ -1,0 +1,417 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/lexanova-nextjs/app/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model City {
+    id      String   @id @default(cuid())
+    name    String   @unique
+    slug    String   @unique
+    lawyers Lawyer[]
+    
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Specialization {
+    id      String   @id @default(cuid())
+    name    String   @unique
+    slug    String   @unique
+    lawyers Lawyer[]
+    
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+// Nouveaux domaines fiscaux pour restructurer les guides
+model FiscalDomain {
+    id          String    @id @default(cuid())
+    name        String    @unique
+    slug        String    @unique
+    description String
+    icon        String    // nom de l'icône Lucide
+    color       String    // couleur hex pour le thème
+    order       Int       @default(0)
+    
+    // Relations
+    articles    Article[]
+    blogPosts   BlogPost[]
+    caseStudies CaseStudy[]
+    lawyers     Lawyer[]
+    resources   Resource[]
+    
+    // SEO
+    metaTitle       String?
+    metaDescription String?
+    
+    createdAt   DateTime  @default(now())
+    updatedAt   DateTime  @updatedAt
+    
+    @@index([order])
+}
+
+model Lawyer {
+    id                String           @id @default(cuid())
+    nomComplet        String
+    ville             String
+    adresseCabinet    String
+    telephone         String
+    email             String           @unique
+    anneesExperience  Int
+    biographie        String
+    
+    // Profil avocat étendu
+    tarifs            String?          // fourchette de tarifs
+    langues           String[]         @default([])
+    photo             String?          // URL de l'avatar
+    disponibilites    String?          // plages horaires
+    consultationDistance Boolean       @default(false)
+    consultationPhysique Boolean       @default(true)
+    
+    // Informations cabinet
+    nomCabinet        String?
+    siteWeb           String?
+    numeroRCS         String?
+    barreau           String?
+    
+    // Relations
+    cityId            String
+    city              City             @relation(fields: [cityId], references: [id])
+    specializations   Specialization[]
+    fiscalDomains     FiscalDomain[]
+    
+    // Système RDV et profil avocat
+    appointments      Appointment[]
+    messages          Message[]
+    availabilities    Availability[]
+    subscription      LawyerSubscription?
+    auth              LawyerAuth?
+    
+    // SEO et métadonnées
+    slug              String           @unique
+    isActive          Boolean          @default(true)
+    isPremium         Boolean          @default(false)
+    isPartner         Boolean          @default(false)
+    
+    createdAt         DateTime         @default(now())
+    updatedAt         DateTime         @updatedAt
+    
+    @@index([ville])
+    @@index([isActive])
+    @@index([isPremium])
+    @@index([isPartner])
+}
+
+// Système d'abonnements pour avocats
+model LawyerSubscription {
+    id        String   @id @default(cuid())
+    type      String   // "basic", "premium", "partner"
+    price     Float
+    startDate DateTime
+    endDate   DateTime
+    isActive  Boolean  @default(true)
+    
+    lawyerId  String   @unique
+    lawyer    Lawyer   @relation(fields: [lawyerId], references: [id])
+    
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    
+    @@index([isActive])
+    @@index([endDate])
+}
+
+// Système de rendez-vous
+model Appointment {
+    id          String   @id @default(cuid())
+    clientName  String
+    clientEmail String
+    clientPhone String?
+    date        DateTime
+    duration    Int      @default(60) // minutes
+    type        String   // "consultation", "rdv", "conference"
+    mode        String   // "physique", "visio", "telephone"
+    subject     String
+    message     String?
+    status      String   @default("pending") // "pending", "confirmed", "cancelled", "completed"
+    
+    lawyerId    String
+    lawyer      Lawyer   @relation(fields: [lawyerId], references: [id])
+    
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+    
+    @@index([lawyerId])
+    @@index([date])
+    @@index([status])
+}
+
+// Disponibilités des avocats
+model Availability {
+    id        String   @id @default(cuid())
+    dayOfWeek Int      // 0-6 (lundi-dimanche)
+    startTime String   // "09:00"
+    endTime   String   // "18:00"
+    isActive  Boolean  @default(true)
+    
+    lawyerId  String
+    lawyer    Lawyer   @relation(fields: [lawyerId], references: [id])
+    
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    
+    @@index([lawyerId])
+    @@index([dayOfWeek])
+}
+
+// Système de messagerie
+model Message {
+    id        String   @id @default(cuid())
+    subject   String
+    content   String
+    isRead    Boolean  @default(false)
+    senderType String  // "client", "lawyer", "system"
+    senderName String
+    senderEmail String
+    
+    lawyerId  String
+    lawyer    Lawyer   @relation(fields: [lawyerId], references: [id])
+    
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    
+    @@index([lawyerId])
+    @@index([isRead])
+    @@index([createdAt])
+}
+
+model Category {
+    id          String    @id @default(cuid())
+    name        String    @unique
+    slug        String    @unique
+    description String?
+    articles    Article[]
+    
+    createdAt   DateTime  @default(now())
+    updatedAt   DateTime  @updatedAt
+}
+
+model Article {
+    id          String   @id @default(cuid())
+    title       String
+    slug        String   @unique
+    content     String
+    excerpt     String?
+    author      String
+    readTime    Int      @default(5) // en minutes
+    isPublished Boolean  @default(false)
+    
+    // Relations
+    categoryId     String?
+    category       Category?     @relation(fields: [categoryId], references: [id])
+    fiscalDomainId String?
+    fiscalDomain   FiscalDomain? @relation(fields: [fiscalDomainId], references: [id])
+    
+    // SEO
+    metaTitle       String?
+    metaDescription String?
+    
+    publishedAt     DateTime?
+    createdAt       DateTime  @default(now())
+    updatedAt       DateTime  @updatedAt
+    
+    @@index([isPublished])
+    @@index([categoryId])
+    @@index([fiscalDomainId])
+    @@index([publishedAt])
+}
+
+// Blog séparé des guides fiscaux
+model BlogPost {
+    id          String   @id @default(cuid())
+    title       String
+    slug        String   @unique
+    content     String
+    excerpt     String?
+    author      String
+    authorBio   String?
+    image       String?
+    readTime    Int      @default(5)
+    isPublished Boolean  @default(false)
+    isFeatured  Boolean  @default(false)
+    views       Int      @default(0)
+    
+    // Relations
+    fiscalDomainId String?
+    fiscalDomain   FiscalDomain? @relation(fields: [fiscalDomainId], references: [id])
+    tags           BlogTag[]
+    
+    // SEO
+    metaTitle       String?
+    metaDescription String?
+    
+    publishedAt     DateTime?
+    createdAt       DateTime  @default(now())
+    updatedAt       DateTime  @updatedAt
+    
+    @@index([isPublished])
+    @@index([isFeatured])
+    @@index([fiscalDomainId])
+    @@index([publishedAt])
+    @@index([views])
+}
+
+model BlogTag {
+    id        String     @id @default(cuid())
+    name      String     @unique
+    slug      String     @unique
+    color     String     @default("#3B82F6")
+    blogPosts BlogPost[]
+    
+    createdAt DateTime   @default(now())
+    updatedAt DateTime   @updatedAt
+}
+
+// Cas pratiques (style Weblex)
+model CaseStudy {
+    id          String   @id @default(cuid())
+    title       String
+    slug        String   @unique
+    story       String   // le récit en storytelling
+    legalIssue  String   // problématique juridique
+    solution    String   // solution apportée
+    outcome     String   // résultat/enseignement
+    excerpt     String?
+    image       String?
+    readTime    Int      @default(8)
+    isPublished Boolean  @default(false)
+    isFeatured  Boolean  @default(false)
+    complexity  String   @default("intermediate") // "beginner", "intermediate", "advanced"
+    
+    // Relations
+    fiscalDomainId String?
+    fiscalDomain   FiscalDomain? @relation(fields: [fiscalDomainId], references: [id])
+    
+    // SEO
+    metaTitle       String?
+    metaDescription String?
+    
+    publishedAt     DateTime?
+    createdAt       DateTime  @default(now())
+    updatedAt       DateTime  @updatedAt
+    
+    @@index([isPublished])
+    @@index([isFeatured])
+    @@index([fiscalDomainId])
+    @@index([complexity])
+    @@index([publishedAt])
+}
+
+// Ressources utiles (documents, modèles d'actes)
+model Resource {
+    id          String   @id @default(cuid())
+    title       String
+    slug        String   @unique
+    description String
+    type        String   // "document", "template", "guide", "form"
+    fileUrl     String?  // URL du fichier à télécharger
+    fileSize    String?  // taille du fichier (ex: "2.5 MB")
+    format      String?  // format (ex: "PDF", "DOCX")
+    isPublic    Boolean  @default(true)
+    downloadCount Int    @default(0)
+    
+    // Relations
+    fiscalDomainId String?
+    fiscalDomain   FiscalDomain? @relation(fields: [fiscalDomainId], references: [id])
+    
+    createdAt   DateTime  @default(now())
+    updatedAt   DateTime  @updatedAt
+    
+    @@index([type])
+    @@index([isPublic])
+    @@index([fiscalDomainId])
+}
+
+
+
+model Contact {
+    id        String   @id @default(cuid())
+    prenom    String
+    nom       String
+    email     String
+    telephone String?
+    message   String
+    isRead    Boolean  @default(false)
+    
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    
+    @@index([isRead])
+    @@index([createdAt])
+}
+
+// Historique des simulations fiscales
+model SimulationHistory {
+    id            String   @id @default(cuid())
+    simulatorType String   // "freelance", "donation", "plus-value-mobiliere", etc.
+    userEmail     String
+    inputData     String   // JSON des données de saisie
+    resultData    String   // JSON des résultats
+    pdfGenerated  Boolean  @default(false)
+    userAgent     String?
+    ipAddress     String?
+    
+    createdAt     DateTime @default(now())
+    updatedAt     DateTime @updatedAt
+    
+    @@index([simulatorType])
+    @@index([userEmail])
+    @@index([createdAt])
+    @@index([pdfGenerated])
+}
+
+// Gestion des taux fiscaux (admin)
+model TaxRate {
+    id          String   @id @default(cuid())
+    category    String   // "ir", "ps", "is", "donation", etc.
+    name        String   // nom du taux
+    value       Float    // valeur du taux (en pourcentage ou absolu)
+    description String?
+    isActive    Boolean  @default(true)
+    validFrom   DateTime
+    validTo     DateTime?
+    
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+    
+    @@index([category])
+    @@index([isActive])
+    @@index([validFrom])
+    @@unique([category, name, validFrom])
+}
+
+// Système d'authentification avocat
+model LawyerAuth {
+    id            String   @id @default(cuid())
+    email         String   @unique
+    passwordHash  String
+    isVerified    Boolean  @default(false)
+    role          String   @default("lawyer") // "lawyer", "admin"
+    resetToken    String?
+    resetTokenExp DateTime?
+    
+    lawyerId      String   @unique
+    lawyer        Lawyer   @relation(fields: [lawyerId], references: [id])
+    
+    createdAt     DateTime @default(now())
+    updatedAt     DateTime @updatedAt
+    
+    @@index([email])
+    @@index([role])
+}
